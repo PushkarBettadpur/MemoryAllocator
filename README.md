@@ -20,12 +20,16 @@ Other support files for the driver
 
 fsecs.o:  
 Wrapper function for the different timer packages  
+
 clock.o:  
 Routines for accessing the Pentium and Alpha cycle counters  
+
 fcyc.o:  
 Timer functions based on cycle counters  
+
 ftimer.o:  
 Timer functions based on interval timers and gettimeofday()  
+
 memlib.{o,h}:  
 Models the heap and sbrk function  
 

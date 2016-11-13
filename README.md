@@ -1,19 +1,18 @@
 ***********
-Main Files:
+Main Components:
 ***********
 
-mm.{c,h}
-        Your solution malloc package. mm.c is the file that you
-        will be handing in, and is the only file you should modify.
+memfiles/mm.c
+        This file contains the implementation of malloc, free and realloc
+        using an segregated free list structure
 
-mdriver.c
-        The malloc driver that tests your mm.c file
+memfiles/mdriver.c
+        The malloc driver that tests the implementations of 
+        this memory allocator for space utilization and throughput
 
-short{1,2}-bal.rep
-        Two tiny tracefiles to help you get started.
-
-Makefile
-        Builds the driver
+traces/
+        Sequence of malloc, free, realloc calls that are called by 
+        mdriver.c to test the implementation
 
 **********************************
 Other support files for the driver
@@ -33,6 +32,10 @@ To build the driver, type "make" to the shell.
 To run the driver on a tiny test trace:
 
         unix> mdriver -V -f short1-bal.rep
+        
+To run the driver over all the provided traces and compare performance to libc malloc:
+
+        unix> mdriver -Vl
 
 The -V option prints out helpful tracing and summary information.
 
